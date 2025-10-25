@@ -1,4 +1,120 @@
-<h1 align="center">Hi 👋, I'm AASTIK RAWAT</h1>
+#!/usr/bin/env python3
+"""
+add_logo.py - Overlay a logo onto a portrait image.
+
+Usage examples:
+  python add_logo.py \
+    --portrait "aastik rawat portfolio picture.jpg" \
+    --logo "logo.png" \
+    --out "assets/portrait-with-logo.png" \
+    --position southeast \
+    --scale 20 \
+    --padding 10 \
+    --opacity 90
+
+Options:
+  --portrait  PATH   Path to the portrait image (required)
+  --logo      PATH   Path to the logo image (required)
+  --out       PATH   Output path (default: portrait-with-logo.png)
+  --position POS    Position: southeast, southwest, northeast, northwest, center (default: southeast)
+  --scale     NUM    Logo size as percentage of portrait width (e.g. 20) or fraction (0.2). Default 20 (means 20%).
+  --padding   NUM    Padding in pixels from the chosen corner (default 10)
+  --opacity   NUM    Logo opacity 0-100 (default 100)
+"""
+import argparse
+import os
+from PIL import Image, ImageEnhance
+
+def parse_scale(value):
+    v = float(value)
+    # if greater than 1, interpret as percent (e.g. 20 -> 0.2)
+    if v > 1:
+        return v / 100.0
+    return v  # already a fraction
+
+def overlay_logo(portrait_path, logo_path, out_path,
+                 position="southeast", scale=0.2, padding=10, opacity=100):
+    # Open portrait
+    portrait = Image.open(portrait_path).convert("RGBA")
+    pw, ph = portrait.size
+
+    # Open logo
+    logo = Image.open(logo_path).convert("RGBA")
+    lw, lh = logo.size
+
+    # Resize logo to scale * portrait width (preserve aspect ratio)
+    target_width = int(pw * scale)
+    if target_width <= 0:
+        raise ValueError("Computed target logo width <= 0. Check scale value.")
+    # Compute new height keeping aspect ratio
+    aspect = lh / lw
+    new_size = (target_width, max(1, int(target_width * aspect)))
+    logo = logo.resize(new_size, Image.LANCZOS)
+    lw, lh = logo.size
+
+    # Apply opacity if needed
+    if opacity < 100:
+        # Split alpha, modify it
+        alpha = logo.split()[3]
+        alpha = ImageEnhance.Brightness(alpha).enhance(opacity / 100.0)
+        logo.putalpha(alpha)
+
+    # Compute position
+    pos = (0, 0)
+    pos_name = position.lower()
+    if pos_name in ("southeast", "se"):
+        pos = (pw - lw - padding, ph - lh - padding)
+    elif pos_name in ("southwest", "sw"):
+        pos = (padding, ph - lh - padding)
+    elif pos_name in ("northeast", "ne"):
+        pos = (pw - lw - padding, padding)
+    elif pos_name in ("northwest", "nw"):
+        pos = (padding, padding)
+    elif pos_name in ("center", "middle", "c"):
+        pos = ((pw - lw) // 2, (ph - lh) // 2)
+    else:
+        raise ValueError(f"Unknown position: {position}")
+
+    # Create a new image with portrait and paste logo with alpha as mask
+    composed = Image.new("RGBA", portrait.size)
+    composed.paste(portrait, (0, 0))
+    composed.paste(logo, pos, logo)
+
+    # If output extension is JPEG, convert to RGB and save as JPEG (no alpha)
+    out_ext = os.path.splitext(out_path)[1].lower()
+    if out_ext in (".jpg", ".jpeg"):
+        composed_rgb = composed.convert("RGB")
+        composed_rgb.save(out_path, quality=90)
+    else:
+        # PNG or other formats keep RGBA
+        composed.save(out_path)
+
+    print(f"Saved composed image to: {out_path}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Overlay a logo onto a portrait image.")
+    parser.add_argument("--portrait", required=True, help="Path to portrait image")
+    parser.add_argument("--logo", required=True, help="Path to logo image (PNG recommended for transparency)")
+    parser.add_argument("--out", default="portrait-with-logo.png", help="Output path")
+    parser.add_argument("--position", default="southeast",
+                        choices=["southeast","se","southwest","sw","northeast","ne","northwest","nw","center","middle","c"],
+                        help="Position for logo (default: southeast)")
+    parser.add_argument("--scale", type=float, default=20.0, help="Logo size as percentage (e.g. 20) or fraction (0.2). Default 20")
+    parser.add_argument("--padding", type=int, default=10, help="Padding from edge in pixels (default 10)")
+    parser.add_argument("--opacity", type=int, default=100, help="Opacity 0-100 (default 100)")
+    args = parser.parse_args()
+
+    scale = parse_scale(args.scale)
+    if not (0 < scale <= 1):
+        raise ValueError("Scale must be a fraction between 0 and 1 (or percentage >0), e.g. 20 or 0.2")
+
+    if not (0 <= args.opacity <= 100):
+        raise ValueError("Opacity must be between 0 and 100")
+
+    overlay_logo(args.portrait, args.logo, args.out, args.position, scale, args.padding, args.opacity)
+
+if __name__ == "__main__":
+    main()<h1 align="center">Hi 👋, I'm AASTIK RAWAT</h1>
 !logo (aastik rawat portfolio picture.jpg)
 <h3 align="center">A passionate Full-stack Dev | Linux & Security | AI Innovator |  Networking | Problem Solver | Ethical Hacking | Innovation Seeker | Lifelong Learner” from India from India</h3>
 
