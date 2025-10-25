@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm AASTIK RAWAT</h1>
 <h3 align="center">A passionate Full-stack Dev | Linux & Security | AI Innovator | Linux, Networking & Security| Problem Solver | Ethical Hacking | Innovation Seeker | Lifelong Learner” from India from India</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=aastik720&label=Profile%20views&color=0e75b6&style=flat" alt="aastik720" /> </p>
+<p align="left"> <img src=https://github.com/aastik720/Aastik-rawat/blob/main/aastik%20rawat%20portfolio%20picture.jpg?raw=true alt="aastik720" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=aastik720" alt="aastik720" /></a> </p>
 
