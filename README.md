@@ -1,25 +1,25 @@
 <h1 align="center">Hi 👋, I'm AASTIK RAWAT</h1>
-<h3 align="center">A passionate Full-stack Dev | Linux & Security | AI Innovator | Linux, Networking & Security| Problem Solver | Ethical Hacking | Innovation Seeker | Lifelong Learner” from India from India</h3>
+<h3 align="center">A passionate Full-stack Dev | Linux & Security | AI Innovator | Networking| Problem Solver | Ethical Hacking | Innovation Seeker | Lifelong Learner” from India</h3>
 
-<p align="left"> <img src=https://github.com/aastik720/Aastik-rawat/blob/main/aastik%20rawat%20portfolio%20picture.jpg?raw=true alt="aastik720" /> </p>
+<p align="left">  <img src=https://github.com/aastik720/Aastik-rawat/blob/main/aastik%20rawat%20portfolio%20picture.jpg?raw=true alt="aastik720" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=aastik720" alt="aastik720" /></a> </p>
+<p align="left">  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src=https://raw.githubusercontent.com/aastik720/Aastik-rawat/5e3d26cad0557fa6d28d704e48087828f3d94ab0/image-boy-working-diligently-computer-wearing-headphones-image-boy-working-diligently-computer-280520492.webp alt="aastik720"  width="40" height="40"/>  </a> </p> AASTIK RAWAT..../
 
-- 🔭 I’m currently working on ["RUDRA"](ON GOING)
+- 🔭 I’m currently working on ["RUDRA"] (ON GOING)
 
+- 👯 I’m currently working on ["REGEL"] (ON GOING)
+
+- 🤝 I’m currently working on ["FITVISION AI"] (ON GOING)
+
+- 👨‍💻 All of my projects are available at [WAIT..]( WE ADD LIVE LINK WHEN THE PROJECT'S ARE COMPLETED )
+  
 - 🌱 I’m currently learning **python,c++,java script,rust,dart**
-
-- 👯 I’m looking to collaborate on ["REGEL"](ON GOING)
-
-- 🤝 I’m looking for help with ["FITVISION AI"](ON GOING)
-
-- 👨‍💻 All of my projects are available at [on buliding](on buliding)
 
 - 💬 Ask me about **coding,hacking,**
 
 - 📫 How to reach me **rawataastik729@gmail.com**
 
-- 📄 Know about my experiences [on building](on building)
+- 📄 Know about my experiences [BY MY RESUMA ](on enhancing )
 
 - ⚡ Fun fact **i am mad to achieve my fucking goal**
 
