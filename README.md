@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm AASTIK RAWAT</h1>
-!logo (
+!logo (aastik rawat portfolio picture.jpg)
 <h3 align="center">A passionate Full-stack Dev | Linux & Security | AI Innovator |  Networking | Problem Solver | Ethical Hacking | Innovation Seeker | Lifelong Learner” from India from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=aastik720&label=Profile%20views&color=0e75b6&style=flat" alt="aastik720" /> </p>
