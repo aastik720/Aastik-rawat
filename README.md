@@ -1,6 +1,6 @@
 ![Logo](cp.png)
 
-# Amine Portfolio Showcase 💻
+# AASTIK RAWAT Portfolio Showcase 💻
 
 Welcome to **AASTIK RAWAT Portfolio Showcase**!  
 A modern **portfolio website** designed to showcase projects, skills, and personal work using **HTML, CSS, PYTHON,and JavaScript**.  
