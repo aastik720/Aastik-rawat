@@ -11,7 +11,7 @@
 
 - 🤝 I’m currently working on ["FITVISION AI"] (ON GOING)
 
-- 👨‍💻 All of my projects are available at [WAIT..]( WE ADD LIVE LINK WHEN THE PROJECT'S ARE COMPLETED )
+- 👨‍💻 All of my projects are available at --- [web portfolio ..]( https://aastik720.github.io/my-web-portfolio/ ) this is made half currently on building you can check 
   
 - 🌱 I’m currently learning **python,c++,java script,rust,dart**
 
